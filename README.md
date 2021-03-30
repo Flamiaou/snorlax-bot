@@ -2,7 +2,7 @@
 
 Un simple bot discord sans commande pour la diffusion 24h / 24 et 7j / 7 de stations de radio Internet (par exemple SHOUTcast).
 
-![Discobot](https://i.imgur.com/pI3KB9I.png)
+![Discobot](https://i.imgur.com/o3S9FRB.png)
 
 ## Requirements
 
