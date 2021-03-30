@@ -1,0 +1,13 @@
+{
+	"prefix":"!",
+	"token":"ton_token",
+	"voicechannel":"code du salon vocaux",
+	"logchannel":"code du channel des logs",
+	"activity":"DEFAULT BOT ACTIVITY",
+	"list":[
+	{
+		"name":"RonflexAnime",
+		"url":"https://pool.anison.fm/AniSonFM(320)?nocache=0.05"
+	}
+	]
+}
