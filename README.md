@@ -1,44 +1,45 @@
 # Discord-bot
 
-A simple commandless discord bot for 24/7 streaming of internet radio stations (e.g. SHOUTcast).
+Un simple bot discord sans commande pour la diffusion 24h / 24 et 7j / 7 de stations de radio Internet (par exemple SHOUTcast).
 
 ![Discobot](https://i.imgur.com/pI3KB9I.png)
 
 ## Requirements
 
-- [Node] (https://nodejs.org/en/)
-- [NPM] (https://www.npmjs.com/)
-- [FFMPEG] (https://www.ffmpeg.org/)
-
-## Getting started
+- [Node] (https://nodejs.org/en/) 
+- npm install
+- npm i ffmpeg
+- npm discord.js
+- 
+## Commencer
 
 First make sure you have all the required tools installed on your machine then continue with these steps.
 
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/leinstay/discobot.git
+# Cloner le référentiel
+git clone https://github.com/Flamiaou/snorlax-bot.git
 
-# Enter into the directory
-cd dmbot/
+# Entrez dans le répertoire
+cd snorlax-bot/
 
-# Install the dependencies
+# Installez les dépendances
 npm install
 ```
 
 ### Configuration
 
-After cloning the project and installing all dependencies provide proper Discord API token, default voice channel ID, default text channel ID (for now playing notifications), and url for one or more music stream in config.json file.
-To acquire channel ID, enable developer mode in Discord and right-click any channel. 
+Après avoir cloné le projet et installé toutes les dépendances, fournissez le jeton d'API Discord approprié, l'ID de canal vocal par défaut, l'ID de canal de texte par défaut (pour la lecture des notifications) et l'URL d'un ou plusieurs flux musicaux dans le fichier config.json.
+Pour acquérir l'ID de chaîne, activez le mode développeur dans Discord et cliquez avec le bouton droit sur n'importe quelle chaîne.
 
-Example configuration for radio station:
+Exemple de configuration pour une station radio:
 ```json
 {
     "prefix": "!a",
-	"token":"{BOT TOKEN}",
-	"voicechannel":"{VOICE CHANNEL ID}",
-	"logchannel":"{TEXT CHANNEL ID}",
+	"token":"TON TOKEN",
+	"voicechannel":"ID SALON VOCAUX",
+	"logchannel":"ID SALON LOGS",
 	"activity":"Anime Radio",
 	"list":[
 	{
@@ -49,14 +50,15 @@ Example configuration for radio station:
 }
 ```
 
-Example configuration for custom playlist:
+Exemple de configuration pour une playlist personnalisée:
+```json
 ```json
 {
-	"prefix":"!d",
-	"token":"{BOT TOKEN}",
-	"voicechannel":"{VOICE CHANNEL ID}",
-	"logchannel":"{TEXT CHANNEL ID}",
-	"activity":"Ranobe Radio",
+    "prefix": "!a",
+	"token":"TON TOKEN",
+	"voicechannel":"ID SALON VOCAUX",
+	"logchannel":"ID SALON LOGS",
+	"activity":"Playlist Radio",
 	"list":[
 	{
 		"name":"Shinkai Makoto - Five centimeters per second.",
@@ -82,24 +84,24 @@ Example configuration for custom playlist:
 }
 ```
 
-### Starting the application
+### Lancer l'application
 
-Since the bot works even when there is no one in the channel, I strongly recommend to use forever or pm2 with cron autorestart for non-stop broadcasting (because of Discord API features the bot has a tendency to transmit silence after 20-30 hours of uptime).
+Étant donné que le bot fonctionne même lorsqu'il n'y a personne dans le canal, je recommande fortement d'utiliser forever ou pm2 avec cron autorestart pour une diffusion non-stop (en raison des fonctionnalités de l'API Discord, le bot a tendance à transmettre le silence après 20-30 heures de disponibilité).
 
 ```bash
-pm2 start index.js --name DiscoBot --log bot.log --time --restart-delay 5000 & pm2 start restart.js --name Restart
+npm start index.js --name DiscoBot --log bot.log --time --restart-delay 5000 & npm start restart.js --name Restart
 ```
 
-Оr you can do it without process managers.
+Ou vous pouvez le faire sans les gestionnaires de processus.
 
 ```bash
 node index.js
 ```
 
-## Author
+##Auteur
 
-Vladimir "Leinstay" Belyaev
+Flamiaou 'Jørdan#5335'
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
+Ce projet est sous licence MIT - voir le fichier [LICENSE.md] (LICENSE) pour plus de détails
